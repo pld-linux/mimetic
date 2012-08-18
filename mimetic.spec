@@ -1,11 +1,13 @@
+# $Revision: 1.1 $, $Date: 2010/12/24 01:47:05 $
 Summary:	Email library (MIME)
 Name:		mimetic
-Version:	0.9.6
+Version:	0.9.7
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://codesink.org/download/%{name}-%{version}.tar.gz
-# Source0-md5:	f853036fddf3a89cdd66659776d2dbea
+# Source0-md5:	07cb65d98fbff212805928a2827db7db
+Patch0:		%{name}-name-lookup-gcc47.patch
 URL:		http://codesink.org/mimetic_mime_library.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -27,6 +29,7 @@ Header files and more to develop using mimetic.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}

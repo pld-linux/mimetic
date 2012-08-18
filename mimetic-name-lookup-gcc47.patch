@@ -1,0 +1,11 @@
+--- mimetic-0.9.7/mimetic/tokenizer.h.org	2012-08-18 19:20:55.020078062 +0200
++++ mimetic-0.9.7/mimetic/tokenizer.h	2012-08-18 19:41:18.082105081 +0200
+@@ -147,7 +147,7 @@
+     ContTokenizer(const Container* cont, const DelimCont& delims)
+     : ItTokenizer<const_iterator,value_type>(cont->begin(), cont->end())
+     {
+-        setDelimList(delims);
++        this->setDelimList(delims);
+     }
+     void setSource(const Container* cont)
+     {
